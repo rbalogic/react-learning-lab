@@ -1,30 +1,7 @@
 import { useReducer } from "react";
+import reducer from "./reducer";
 
-const initialState = { items: [], value: "" };
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "ADD":
-      return {
-        ...state,
-        items: [...state.items, action.value],
-        value: "",
-      };
-    case "SET_VALUE":
-      return {
-        ...state,
-        value: action.value,
-      };
-    case "DELETE":
-      return {
-        ...state,
-        items: state.items.filter((_, index) => index !== action.value),
-      };
-
-    default:
-      break;
-  }
-};
+const initialState = { items: [], value: "", completed: [] };
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -46,18 +23,28 @@ const App = () => {
         Save
       </button>
       <h3>Items</h3>
-      {state.items.map((item, index) => (
-        <div key={index}>
-          <p>{item}</p>
-          <button
-            onClick={() => {
-              dispatch({ type: "DELETE", value: index });
-            }}
-          >
-            Delete
-          </button>
-        </div>
-      ))}
+      {state.items.map((item, index) => {
+        const isCompleted = state.completed.includes(index);
+        return (
+          <div key={index}>
+            {isCompleted ? <s>{item}</s> : <p>{item}</p>}
+            <button
+              onClick={() => {
+                dispatch({ type: "DELETE", value: index });
+              }}
+            >
+              Delete
+            </button>
+            <button
+              onClick={() => {
+                dispatch({ type: "COMPLETED", value: index });
+              }}
+            >
+              {isCompleted ? "Undo" : "Complete"}
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };
