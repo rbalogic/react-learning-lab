@@ -1,16 +1,20 @@
-const Input = () => {
+import { useContext } from "react";
+import { TodoContext } from "../TodoContext";
+
+const Input = ({ handleChange }) => {
+  const stateContext = useContext(TodoContext);
   return (
     <div>
       <input
         type="text"
-        value={state.value} // TODO: fetch state from useContext
+        value={stateContext.value}
         onChange={(e) => {
-          dispatch({ type: "SET_VALUE", value: e.target.value }); // TODO: pass dispatch function from parent
+          handleChange({ type: "SET_VALUE", value: e.target.value });
         }}
       ></input>
       <button
         onClick={() => {
-          dispatch({ type: "ADD", value: state.value }); // TODO: pass dispatch function from parent
+          handleChange({ type: "ADD", value: stateContext.value });
         }}
       >
         Save
