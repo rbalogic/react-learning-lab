@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import reducer from "./reducer";
+import Input from "./components/Input";
 
 const initialState = { items: [], value: "", completed: [] };
 
@@ -8,20 +9,7 @@ const App = () => {
   return (
     <div>
       <h1>Omni List</h1>
-      <input
-        type="text"
-        value={state.value}
-        onChange={(e) => {
-          dispatch({ type: "SET_VALUE", value: e.target.value });
-        }}
-      ></input>
-      <button
-        onClick={() => {
-          dispatch({ type: "ADD", value: state.value });
-        }}
-      >
-        Save
-      </button>
+      <Input />
       <h3>Items</h3>
       {state.items.map((item, index) => {
         const isCompleted = state.completed.includes(index);
