@@ -1,10 +1,13 @@
 # React Learning Lab
 
-A small learning repository for practicing React fundamentals.
+A small repository for practicing React fundamentals with separate Vite-based exercises.
 
-Currently, this repo contains one project:
+## Projects
 
-- `atomic-counter`: a simple counter app built with React + Vite using `useReducer` for state transitions.
+- `atomic-counter` - a counter app built with React and `useReducer`
+- `omni-list` - a todo/list app built with React, context, and `useReducer`
+
+Each project is self-contained and has its own `package.json`, `node_modules` install, and Vite config.
 
 ## Repository Structure
 
@@ -12,60 +15,76 @@ Currently, this repo contains one project:
 react-learning-lab/
   atomic-counter/
     src/
+    public/
     package.json
+    vite.config.js
+  omni-list/
+    src/
+    public/
+    package.json
+    vite.config.js
 ```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ (recommended: latest LTS)
+- Node.js 18+ recommended
 - npm
 
 ### Install Dependencies
+
+Install dependencies inside the project you want to run:
 
 ```bash
 cd atomic-counter
 npm install
 ```
 
+or
+
+```bash
+cd omni-list
+npm install
+```
+
 ### Run in Development
+
+From the project directory:
 
 ```bash
 npm run dev
 ```
 
-Vite will print a local URL (usually `http://localhost:5173`) where you can view the app.
+Vite will print a local URL, usually `http://localhost:5173`, where you can view the app.
 
 ## Available Scripts
 
-Run these commands inside `atomic-counter`:
+Both apps use the same script set inside their own folders:
 
 - `npm run dev` - Start the Vite dev server
 - `npm run build` - Build the app for production
 - `npm run preview` - Preview the production build locally
 - `npm run lint` - Run ESLint
 
-## What This App Demonstrates
+## What Each App Demonstrates
 
-The `atomic-counter` app includes:
+### `atomic-counter`
 
-- Increment and decrement actions
-- Reset action
-- Input-driven counter updates via reducer actions
-- Centralized state transitions using `useReducer`
+- Reducer-based state transitions with `useReducer`
+- Increment, decrement, and reset actions
+- Input-driven updates with staged state
 
-## Reducer Action Types
+### `omni-list`
 
-The `atomic-counter` reducer currently supports:
-
-- `INCREMENT` - Increase `count` by 1
-- `DECREMENT` - Decrease `count` by 1
-- `RESET` - Reset `count` to 0
-- `SET_COUNTER_VALUE` - Update the staged input value (`counterChangeValue`)
-- `CHANGE_COUNTER_VALUE` - Set `count` to the staged input value
+- List updates with `useReducer`
+- Shared state via React context
+- Add, complete, delete, and clear-completed flows
+- Array updates and index re-mapping after deletion
 
 ## Notes
 
-- Dependencies are managed per project (currently only `atomic-counter`).
-- As more learning exercises are added, this root README can be expanded with links and quickstart instructions for each app.
+- There is no root-level app or root-level `package.json`; run commands from the project you want to work on.
+- The per-project READMEs contain additional exercise-specific notes:
+  - [`atomic-counter/README.md`](atomic-counter/README.md)
+  - [`omni-list/README.md`](omni-list/README.md)
