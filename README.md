@@ -6,6 +6,7 @@ A small repository for practicing React fundamentals with separate Vite-based ex
 
 - `atomic-counter` - a counter app built with React and `useReducer`
 - `omni-list` - a todo/list app built with React, context, and `useReducer`
+- `wiki-search-debouncer` - a debounced Wikipedia search app built with React hooks
 
 Each project is self-contained and has its own `package.json`, `node_modules` install, and Vite config.
 
@@ -19,6 +20,11 @@ react-learning-lab/
     package.json
     vite.config.js
   omni-list/
+    src/
+    public/
+    package.json
+    vite.config.js
+  wiki-search-debouncer/
     src/
     public/
     package.json
@@ -48,6 +54,13 @@ cd omni-list
 npm install
 ```
 
+or
+
+```bash
+cd wiki-search-debouncer
+npm install
+```
+
 ### Run in Development
 
 From the project directory:
@@ -60,7 +73,7 @@ Vite will print a local URL, usually `http://localhost:5173`, where you can view
 
 ## Available Scripts
 
-Both apps use the same script set inside their own folders:
+All apps use the same script set inside their own folders:
 
 - `npm run dev` - Start the Vite dev server
 - `npm run build` - Build the app for production
@@ -82,9 +95,17 @@ Both apps use the same script set inside their own folders:
 - Add, complete, delete, and clear-completed flows
 - Array updates and index re-mapping after deletion
 
+### wiki-search-debouncer
+
+- Input state with `useState`
+- Debounced side effects with `useEffect` and cleanup timers
+- Async fetch flow against Wikipedia search API
+- Loading and result rendering patterns
+
 ## Notes
 
 - There is no root-level app or root-level `package.json`, run commands from the project you want to work on.
 - The per-project READMEs contain additional exercise-specific notes:
   - [atomic-counter/README.md](atomic-counter/README.md)
   - [omni-list/README.md](omni-list/README.md)
+  - [wiki-search-debouncer/README.md](wiki-search-debouncer/README.md)
