@@ -27,6 +27,14 @@ const reducer = (state, action) => {
           ? state.completed.filter((index) => index !== action.value)
           : [...state.completed, action.value],
       };
+    case "CLEAR_COMPLETED": {
+      const completedSet = new Set(state.completed);
+      return {
+        ...state,
+        items: state.items.filter((_, index) => !completedSet.has(index)),
+        completed: [],
+      };
+    }
 
     default:
       return state;

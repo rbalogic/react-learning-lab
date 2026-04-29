@@ -11,8 +11,15 @@ const App = () => {
   return (
     <TodoContext.Provider value={state}>
       <h1>Omni List</h1>
+      <button
+        onClick={() => {
+          dispatch({ type: "CLEAR_COMPLETED" });
+        }}
+      >
+        Delete Completed
+      </button>
       <Input handleChange={dispatch} />
-      <h3>Items</h3>
+      <h3>Items (Total: {state.items.length - state.completed.length})</h3>
       <Items handleClick={dispatch} />
     </TodoContext.Provider>
   );
