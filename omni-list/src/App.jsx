@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-const initialState = { items: ["Read Books"], value: "" };
+const initialState = { items: [], value: "" };
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -14,6 +14,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         value: action.value,
+      };
+    case "DELETE":
+      return {
+        ...state,
+        items: state.items.filter((_, index) => index !== action.value),
       };
 
     default:
@@ -42,7 +47,16 @@ const App = () => {
       </button>
       <h3>Items</h3>
       {state.items.map((item, index) => (
-        <p key={index}>{item}</p>
+        <div key={index}>
+          <p>{item}</p>
+          <button
+            onClick={() => {
+              dispatch({ type: "DELETE", value: index });
+            }}
+          >
+            Delete
+          </button>
+        </div>
       ))}
     </div>
   );
