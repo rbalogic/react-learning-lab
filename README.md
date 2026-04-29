@@ -86,5 +86,5 @@ Both apps use the same script set inside their own folders:
 
 - There is no root-level app or root-level `package.json`; run commands from the project you want to work on.
 - The per-project READMEs contain additional exercise-specific notes:
-  - [`atomic-counter/README.md`](atomic-counter/README.md)
-  - [`omni-list/README.md`](omni-list/README.md)
+  - [atomic-counter/README.md](atomic-counter/README.md)
+  - [omni-list/README.md](omni-list/README.md)
