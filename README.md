@@ -69,13 +69,13 @@ Both apps use the same script set inside their own folders:
 
 ## What Each App Demonstrates
 
-### `atomic-counter`
+### atomic-counter
 
 - Reducer-based state transitions with `useReducer`
 - Increment, decrement, and reset actions
 - Input-driven updates with staged state
 
-### `omni-list`
+### omni-list
 
 - List updates with `useReducer`
 - Shared state via React context
@@ -84,7 +84,7 @@ Both apps use the same script set inside their own folders:
 
 ## Notes
 
-- There is no root-level app or root-level `package.json`; run commands from the project you want to work on.
+- There is no root-level app or root-level `package.json`, run commands from the project you want to work on.
 - The per-project READMEs contain additional exercise-specific notes:
-  - [`atomic-counter/README.md`](atomic-counter/README.md)
-  - [`omni-list/README.md`](omni-list/README.md)
+  - [atomic-counter/README.md](atomic-counter/README.md)
+  - [omni-list/README.md](omni-list/README.md)
