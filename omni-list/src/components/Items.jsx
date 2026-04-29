@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TodoContext } from "../TodoContext";
+import { ACTIONS } from "../actions";
 
 export const Items = ({ handleClick }) => {
   const stateContext = useContext(TodoContext);
@@ -13,14 +14,14 @@ export const Items = ({ handleClick }) => {
             {isCompleted ? <s>{item}</s> : <p>{item}</p>}
             <button
               onClick={() => {
-                handleClick({ type: "DELETE", value: index });
+                handleClick({ type: ACTIONS.DELETE, value: index });
               }}
             >
               Delete
             </button>
             <button
               onClick={() => {
-                handleClick({ type: "COMPLETED", value: index });
+                handleClick({ type: ACTIONS.COMPLETED, value: index });
               }}
             >
               {isCompleted ? "Undo" : "Complete"}

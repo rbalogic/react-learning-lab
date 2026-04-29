@@ -1,17 +1,18 @@
+import { ACTIONS } from "./actions";
 const reducer = (state, action) => {
   switch (action.type) {
-    case "ADD":
+    case ACTIONS.ADD:
       return {
         ...state,
         items: [...state.items, action.value],
         value: "",
       };
-    case "SET_VALUE":
+    case ACTIONS.SET_VALUE:
       return {
         ...state,
         value: action.value,
       };
-    case "DELETE":
+    case ACTIONS.DELETE:
       return {
         ...state,
         items: state.items.filter((_, index) => index !== action.value),
@@ -20,14 +21,14 @@ const reducer = (state, action) => {
           .filter((index) => index !== action.value)
           .map((index) => (index > action.value ? index - 1 : index)),
       };
-    case "COMPLETED":
+    case ACTIONS.COMPLETED:
       return {
         ...state,
         completed: state.completed.includes(action.value)
           ? state.completed.filter((index) => index !== action.value)
           : [...state.completed, action.value],
       };
-    case "CLEAR_COMPLETED": {
+    case ACTIONS.CLEAR_COMPLETED: {
       const completedSet = new Set(state.completed);
       return {
         ...state,

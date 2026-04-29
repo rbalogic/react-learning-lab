@@ -3,6 +3,7 @@ import reducer from "./reducer";
 import Input from "./components/Input";
 import { TodoContext } from "./TodoContext";
 import { Items } from "./components/Items";
+import { ACTIONS } from "./actions";
 
 const initialState = { items: [], value: "", completed: [] };
 
@@ -13,7 +14,7 @@ const App = () => {
       <h1>Omni List</h1>
       <button
         onClick={() => {
-          dispatch({ type: "CLEAR_COMPLETED" });
+          dispatch({ type: ACTIONS.CLEAR_COMPLETED });
         }}
       >
         Delete Completed

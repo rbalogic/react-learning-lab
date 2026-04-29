@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TodoContext } from "../TodoContext";
+import { ACTIONS } from "../actions";
 
 const Input = ({ handleChange }) => {
   const stateContext = useContext(TodoContext);
@@ -9,12 +10,12 @@ const Input = ({ handleChange }) => {
         type="text"
         value={stateContext.value}
         onChange={(e) => {
-          handleChange({ type: "SET_VALUE", value: e.target.value });
+          handleChange({ type: ACTIONS.SET_VALUE, value: e.target.value });
         }}
       ></input>
       <button
         onClick={() => {
-          handleChange({ type: "ADD", value: stateContext.value });
+          handleChange({ type: ACTIONS.ADD, value: stateContext.value });
         }}
       >
         Save
