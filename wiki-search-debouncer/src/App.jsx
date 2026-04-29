@@ -7,14 +7,19 @@ const App = () => {
   useEffect(() => {
     const fetchResults = async () => {
       console.log("fetching queries for", searchTerm);
-      const response = await fetch(
-        `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=5&srsearch=${searchTerm}`,
-      );
-      const data = await response.json();
-      setSearchResults(data.query.search);
+      try {
+        const response = await fetch(
+          `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=5&srsearch=${searchTerm}`,
+        );
+        const data = await response.json();
+        setSearchResults(data.query.search);
+      } catch (error) {
+        console.log(error);
+      }
     };
     if (searchTerm && searchTerm.length >= 5) {
-      fetchResults();
+      const timer = setTimeout(fetchResults, 3000);
+      return () => clearTimeout(timer);
     }
   }, [searchTerm]);
 
