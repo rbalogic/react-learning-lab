@@ -58,10 +58,10 @@ Vite will print a local URL (usually `http://localhost:5173`) where you can view
 
 | Project | Features / Demonstrates |
 | :--- | :--- |
-| [`atomic-counter`](atomic-counter/) | • Reducer-based state transitions (`useReducer`) <br> • Increment, decrement, and reset actions <br> • Input-driven updates with staged state |
-| [`omni-list`](omni-list/) | • List updates (`useReducer`) <br> • Shared state via React Context <br> • Add, complete, delete, and clear-completed flows <br> • Array updates and index re-mapping |
-| [`useref-playground`](useref-playground/) | • DOM access with `useRef` <br> • Auto-focusing elements with `useEffect` <br> • Imperative interaction with input elements |
-| [`wiki-search-debouncer`](wiki-search-debouncer/) | • Input state with `useState` <br> • Debounced side effects with `useEffect` <br> • Async fetch flow against Wikipedia API <br> • Loading and result rendering patterns |
+| [atomic-counter](atomic-counter/) | Reducer-based state transitions (`useReducer`), increment/decrement/reset, and staged input updates. |
+| [omni-list](omni-list/) | List management with `useReducer`, shared state via Context, and array re-mapping. |
+| [useref-playground](useref-playground/) | DOM access via `useRef`, auto-focusing with `useEffect`, and imperative input interactions. |
+| [wiki-search-debouncer](wiki-search-debouncer/) | Debounced Wikipedia search with `useState`, `useEffect`, and async fetch flow. |
 
 ## Notes
 
