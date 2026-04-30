@@ -16,25 +16,9 @@ Each project is self-contained and has its own `package.json`, `node_modules` in
 ```text
 react-learning-lab/
   atomic-counter/
-    src/
-    public/
-    package.json
-    vite.config.js
   omni-list/
-    src/
-    public/
-    package.json
-    vite.config.js
   useref-playground/
-    src/
-    public/
-    package.json
-    vite.config.js
   wiki-search-debouncer/
-    src/
-    public/
-    package.json
-    vite.config.js
 ```
 
 ## Getting Started
@@ -44,77 +28,54 @@ react-learning-lab/
 - Node.js 18+ recommended
 - npm
 
-### Install Dependencies
+### Installation & Usage
 
-Install dependencies inside the project you want to run:
+All projects are independent. To run a specific exercise:
 
-```bash
-cd atomic-counter
-npm install
-```
+1. **Navigate to the project directory:**
+   ```bash
+   cd <project-name>
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run in development:**
+   ```bash
+   npm run dev
+   ```
 
-or
+Vite will print a local URL (usually `http://localhost:5173`) where you can view the app.
 
-```bash
-cd omni-list
-npm install
-```
-
-or
-
-```bash
-cd useref-playground
-npm install
-```
-
-or
-
-```bash
-cd wiki-search-debouncer
-npm install
-```
-
-### Run in Development
-
-From the project directory:
-
-```bash
-npm run dev
-```
-
-Vite will print a local URL, usually `http://localhost:5173`, where you can view the app.
-
-## Available Scripts
-
-All apps use the same script set inside their own folders:
+### Available Scripts
 
 - `npm run dev` - Start the Vite dev server
 - `npm run build` - Build the app for production
 - `npm run preview` - Preview the production build locally
 - `npm run lint` - Run ESLint
 
-## What Each App Demonstrates
+## Project Details
 
-### atomic-counter
+### [atomic-counter](atomic-counter/README.md)
 
 - Reducer-based state transitions with `useReducer`
 - Increment, decrement, and reset actions
 - Input-driven updates with staged state
 
-### omni-list
+### [omni-list](omni-list/README.md)
 
 - List updates with `useReducer`
 - Shared state via React context
 - Add, complete, delete, and clear-completed flows
 - Array updates and index re-mapping after deletion
 
-### useref-playground
+### [useref-playground](useref-playground/README.md)
 
 - DOM access with `useRef`
 - Auto-focusing elements with `useEffect`
 - Imperative interaction with input elements
 
-### wiki-search-debouncer
+### [wiki-search-debouncer](wiki-search-debouncer/README.md)
 
 - Input state with `useState`
 - Debounced side effects with `useEffect` and cleanup timers
@@ -123,9 +84,4 @@ All apps use the same script set inside their own folders:
 
 ## Notes
 
-- There is no root-level app or root-level `package.json`, run commands from the project you want to work on.
-- The per-project READMEs contain additional exercise-specific notes:
-  - [atomic-counter/README.md](atomic-counter/README.md)
-  - [omni-list/README.md](omni-list/README.md)
-  - [useref-playground/README.md](useref-playground/README.md)
-  - [wiki-search-debouncer/README.md](wiki-search-debouncer/README.md)
+- There is no root-level app or root-level `package.json`. You must run commands from within the specific project folder you are working on.
