@@ -56,26 +56,26 @@ Vite will print a local URL (usually `http://localhost:5173`) where you can view
 
 ## Project Details
 
-### [atomic-counter](atomic-counter/README.md)
+### [atomic-counter](atomic-counter/)
 
 - Reducer-based state transitions with `useReducer`
 - Increment, decrement, and reset actions
 - Input-driven updates with staged state
 
-### [omni-list](omni-list/README.md)
+### [omni-list](omni-list/)
 
 - List updates with `useReducer`
 - Shared state via React context
 - Add, complete, delete, and clear-completed flows
 - Array updates and index re-mapping after deletion
 
-### [useref-playground](useref-playground/README.md)
+### [useref-playground](useref-playground/)
 
 - DOM access with `useRef`
 - Auto-focusing elements with `useEffect`
 - Imperative interaction with input elements
 
-### [wiki-search-debouncer](wiki-search-debouncer/README.md)
+### [wiki-search-debouncer](wiki-search-debouncer/)
 
 - Input state with `useState`
 - Debounced side effects with `useEffect` and cleanup timers
