@@ -6,6 +6,7 @@ A small repository for practicing React fundamentals with separate Vite-based ex
 
 - `atomic-counter` - a counter app built with React and `useReducer`
 - `omni-list` - a todo/list app built with React, context, and `useReducer`
+- `useref-playground` - a playground for practicing `useRef` and DOM access
 - `wiki-search-debouncer` - a debounced Wikipedia search app built with React hooks
 
 Each project is self-contained and has its own `package.json`, `node_modules` install, and Vite config.
@@ -20,6 +21,11 @@ react-learning-lab/
     package.json
     vite.config.js
   omni-list/
+    src/
+    public/
+    package.json
+    vite.config.js
+  useref-playground/
     src/
     public/
     package.json
@@ -51,6 +57,13 @@ or
 
 ```bash
 cd omni-list
+npm install
+```
+
+or
+
+```bash
+cd useref-playground
 npm install
 ```
 
@@ -95,6 +108,12 @@ All apps use the same script set inside their own folders:
 - Add, complete, delete, and clear-completed flows
 - Array updates and index re-mapping after deletion
 
+### useref-playground
+
+- DOM access with `useRef`
+- Auto-focusing elements with `useEffect`
+- Imperative interaction with input elements
+
 ### wiki-search-debouncer
 
 - Input state with `useState`
@@ -108,4 +127,5 @@ All apps use the same script set inside their own folders:
 - The per-project READMEs contain additional exercise-specific notes:
   - [atomic-counter/README.md](atomic-counter/README.md)
   - [omni-list/README.md](omni-list/README.md)
+  - [useref-playground/README.md](useref-playground/README.md)
   - [wiki-search-debouncer/README.md](wiki-search-debouncer/README.md)
