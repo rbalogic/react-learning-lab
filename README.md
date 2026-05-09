@@ -6,6 +6,7 @@ A small repository for practicing React fundamentals with separate Vite-based ex
 
 - [atomic-counter](atomic-counter/)  - a counter app built with React and `useReducer`
 - [omni-list](omni-list/) - a todo/list app built with React, context, and `useReducer`
+- [quiz-show](quiz-show/) - a quiz application built with React
 - [useref-playground](useref-playground/) - a playground for practicing `useRef` and DOM access
 - [wiki-search-debouncer](wiki-search-debouncer/) - a debounced Wikipedia search app built with React hooks
 
@@ -17,6 +18,7 @@ Each project is self-contained and has its own `package.json`, `node_modules` in
 react-learning-lab/
   atomic-counter/
   omni-list/
+  quiz-show/
   useref-playground/
   wiki-search-debouncer/
 ```
