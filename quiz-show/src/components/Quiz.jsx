@@ -4,6 +4,7 @@ import completedLogo from "../assets/quiz-complete.png";
 
 const Quiz = () => {
   const [userAnswers, setUserAnswers] = useState([]);
+  const [score, setScore] = useState(0);
   const activeQuestionIndex = userAnswers.length;
 
   const isQuizComplete = activeQuestionIndex === QUESTIONS.length;
@@ -13,6 +14,8 @@ const Quiz = () => {
       <div id="summary">
         <img src={completedLogo} />
         <h2>Quiz Completed</h2>
+        <h4>Your Score: {score}</h4>
+        <h4>Wrong Answers: {QUESTIONS.length - score}</h4>
       </div>
     );
   }
@@ -24,6 +27,9 @@ const Quiz = () => {
     setUserAnswers((prevUserAnswer) => {
       return [...prevUserAnswer, selectedAnswer];
     });
+    if (selectedAnswer === QUESTIONS[activeQuestionIndex].answers[0]) {
+      setScore((prevScore) => prevScore + 1);
+    }
   };
 
   return (
