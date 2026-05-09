@@ -4,10 +4,10 @@ A small repository for practicing React fundamentals with separate Vite-based ex
 
 ## Projects
 
-- `atomic-counter` - a counter app built with React and `useReducer`
-- `omni-list` - a todo/list app built with React, context, and `useReducer`
-- `useref-playground` - a playground for practicing `useRef` and DOM access
-- `wiki-search-debouncer` - a debounced Wikipedia search app built with React hooks
+- [atomic-counter](atomic-counter/)  - a counter app built with React and `useReducer`
+- [omni-list](omni-list/) - a todo/list app built with React, context, and `useReducer`
+- [useref-playground](useref-playground/) - a playground for practicing `useRef` and DOM access
+- [wiki-search-debouncer](wiki-search-debouncer/) - a debounced Wikipedia search app built with React hooks
 
 Each project is self-contained and has its own `package.json`, `node_modules` install, and Vite config.
 
@@ -53,15 +53,6 @@ Vite will print a local URL (usually `http://localhost:5173`) where you can view
 - `npm run build` - Build the app for production
 - `npm run preview` - Preview the production build locally
 - `npm run lint` - Run ESLint
-
-## Project Details
-
-| Project | Features / Demonstrates |
-| :--- | :--- |
-| [atomic-counter](atomic-counter/) | Reducer-based state transitions (`useReducer`), increment/decrement/reset, and staged input updates. |
-| [omni-list](omni-list/) | List management with `useReducer`, shared state via Context, and array re-mapping. |
-| [useref-playground](useref-playground/) | DOM access via `useRef`, auto-focusing with `useEffect`, and imperative input interactions. |
-| [wiki-search-debouncer](wiki-search-debouncer/) | Debounced Wikipedia search with `useState`, `useEffect`, and async fetch flow. |
 
 ## Notes
 
