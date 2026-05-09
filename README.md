@@ -4,7 +4,7 @@ A small repository for practicing React fundamentals with separate Vite-based ex
 
 ## Projects
 
-- [atomic-counter](atomic-counter/)  - a counter app built with React and `useReducer`
+- [atomic-counter](atomic-counter/) - a counter app built with React and `useReducer`
 - [omni-list](omni-list/) - a todo/list app built with React, context, and `useReducer`
 - [quiz-show](quiz-show/) - a quiz application built with React
 - [useref-playground](useref-playground/) - a playground for practicing `useRef` and DOM access
